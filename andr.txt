@@ -1,5 +1,4 @@
-//AddFragment.java
-package com.example.gossssss;
+==========================AddFragment.java===========================
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -75,7 +74,9 @@ public class AddFragment extends Fragment {
 
     }
 }
-//addFragment.xml
+
+=========================fragment_add.xml==============================
+
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -139,8 +140,8 @@ public class AddFragment extends Fragment {
     </LinearLayout>
 
 </FrameLayout>
-//Country.java
-package com.example.gossssss;
+
+===============================Country.java==============================
 
 import java.io.Serializable;
 
@@ -217,8 +218,8 @@ public class Country implements Serializable {
                 '}';
     }
 }
-//CountryAdapter.java
-package com.example.gossssss;
+
+=====================CountryAdapter.java=================
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -277,8 +278,8 @@ public class CountryAdapter extends ArrayAdapter<Country> {
         return view;
     }
 }
-//dbService
-package com.example.gossssss;
+
+======================dbService.java===================
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -309,8 +310,8 @@ public class dbService extends SQLiteOpenHelper {
         onCreate(db);
     }
 }
-//MainActivity.java
-package com.example.gossssss;
+
+=================MainActivity.java=============
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -484,7 +485,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         adapter.notifyDataSetChanged();
     }
 }
-//activity_main.xml
+
+====================activity_main.xml======================
+
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -576,8 +579,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
-//SearchActivity.java
-package com.example.gossssss;
+
+===============list_item.xml=================
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textSize="20sp"></TextView>
+        <TextView
+            android:id="@+id/Capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textSize="20sp">
+        </TextView>
+        <TextView
+            android:id="@+id/Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textSize="20sp">
+        </TextView>
+        <CheckBox
+            android:id="@+id/Flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </CheckBox>
+    </LinearLayout>
+</LinearLayout>
+
+=======================activity_search.xml=======================
+//Создать в ручную через Activity - Empty activity
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <ListView
+        android:id="@+id/lvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp" />
+</android.support.constraint.ConstraintLayout>
+
+
+
+===============SearchActivity.java==================
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -601,22 +669,67 @@ public class SearchActivity extends AppCompatActivity {
         lvSearch.setAdapter(adapter);
     }
 }
-//activity_search.xml
+
+===============fragment_update.xml================
+
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    tools:context=".UpdateFragment">
 
-    <ListView
-        android:id="@+id/lvSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp" />
-</android.support.constraint.ConstraintLayout>
-//UpdateFragment.java
-package com.example.gossssss;
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/UpdateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/Country"
+                android:textSize="20sp">
+            </EditText>
+            <EditText
+                android:id="@+id/UpdateCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/Capital"
+                android:textSize="20sp">
+            </EditText>
+            <EditText
+                android:id="@+id/UpdateNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/Number"
+                android:textSize="20sp">
+            </EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpdateItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnChange">
+        </Button>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+==============UpdateFragment.java================
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -689,7 +802,9 @@ public class UpdateFragment extends Fragment {
         return view;
     }
 }
-//Strings.xml
+
+=================Strings.xml============
+
 <resources>
     <string name="app_name">Gossssss</string>
     <string name="btnAddNewItem">Add</string>
@@ -708,7 +823,10 @@ public class UpdateFragment extends Fragment {
     <string name="btnLoadJson">Load Json</string>
 
 </resources>
-//strings.xml ru
+
+============strings.xml ru=============
+//делать ручками через добавления языка по нажатию на планетку
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gossssss</string>
@@ -724,5 +842,128 @@ public class UpdateFragment extends Fragment {
     <string name="btnSaveJSON">Сохранить в Json</string>
     <string name="btnLoadJson">Загрузить из Json</string>
 </resources>
-//Gradle
+============Gradle===========
+//искать файл где есть похожие строки
+
+
     implementation 'com.google.code.gson:gson:2.9.0'
+
+==============activity_main.xml (land)=========
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+
+        </FrameLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/TextSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnSearch" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnLoadJSON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnLoadJson" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnAddFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AddItemInItems" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnSaveJSON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnSaveJSON" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/btnUpdateFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/UpdateItem" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/lvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+============activity_search.xml (land)========
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <ListView
+        android:id="@+id/lvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp" />
+</android.support.constraint.ConstraintLayout>
