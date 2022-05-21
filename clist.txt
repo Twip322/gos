@@ -1,4 +1,4 @@
-//развернуть в другом файле вызвать метод test в программе CircularDoublyLinkedList<int>.test()
+//развернуть в другом файле(или написать снизу в программе) вызвать метод test в программе CircularDoublyLinkedList<int>.test()
 public class CircularDoublyLinkedList<T> : IEnumerable<T>  // кольцевой двусвязный список
     {
         /// <summary>
