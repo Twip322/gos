@@ -1,3 +1,5 @@
+//В нугет пакетах установить System.Text.Json(просто в поиске нугет пакетов text json)
+
 ===Game.cs===
 /// <summary>
     /// Ну а вот и виновник торжества, класс с данными
@@ -66,11 +68,13 @@ public partial class Form1 : Form
         private void button2_Click(object sender, EventArgs e)
         {
             //открываем ебаный файл
-            using FileStream fileStream = File.OpenRead(Directory.GetCurrentDirectory() + "/jsonFile.txt");
-            //Десериализуем эту парашу, не забывая приводить к нужному нам типу
-            games = JsonSerializer.Deserialize<List<Game>>(fileStream);
-            //Ебашим загрузку данных на всякие датагриды
-            LoadData();
+            using (FileStream fileStream = File.OpenRead(Directory.GetCurrentDirectory() + "/jsonFile.txt"))
+            {
+                //Десериализуем эту парашу, не забывая приводить к нужному нам типу
+                games = JsonSerializer.Deserialize<List<Game>>(fileStream);
+                //Ебашим загрузку данных на всякие датагриды
+                LoadData();
+            };
         }
         //Ну а хули, пишем в файл жсон
         private void button3_Click(object sender, EventArgs e)
