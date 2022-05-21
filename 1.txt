@@ -1,0 +1,22 @@
+AISD - https://github.com/D4Gj/gos/raw/aisd/Program.cs
+Andr - https://github.com/D4Gj/gos/raw/andr/andr.txt
+IP1 - https://github.com/D4Gj/gos/raw/ip/1.txt
+IP2 - https://github.com/D4Gj/gos/raw/ip/2.txt
+IP3 - https://github.com/D4Gj/gos/raw/ip/3.txt
+IP4 - https://github.com/D4Gj/gos/raw/ip/4.txt
+IP5 - https://github.com/D4Gj/gos/raw/ip/5.txt
+CSharp forms easy - https://github.com/D4Gj/gos/raw/sharp/sharp.txt
+Csharp forms hard - https://github.com/D4Gj/gos/raw/sharp/sharp_alb.txt
+
+
+===SOS===
+
+Albina - https://github.com/D4Gj/gos/raw/sos/a.txt
+Lebedev - https://github.com/D4Gj/gos/raw/sos/d4g.txt
+Goshan - https://github.com/D4Gj/gos/raw/sos/g.txt
+Lyaisan - https://github.com/D4Gj/gos/raw/sos/l.txt
+Lena - https://github.com/D4Gj/gos/raw/sos/lena.txt
+Lera - https://github.com/D4Gj/gos/raw/sos/lera.txt
+Nickita - https://github.com/D4Gj/gos/raw/sos/nick.txt
+Olga - https://github.com/D4Gj/gos/raw/sos/o.txt
+Kostin - https://github.com/D4Gj/gos/raw/sos/x.txt
