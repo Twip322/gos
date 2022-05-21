@@ -7,6 +7,7 @@ AISD все сортировки - https://github.com/D4Gj/gos/raw/aisd/sort.txt
 AISD бинарное дерево - https://github.com/D4Gj/gos/raw/aisd/tree.txt
 Andr - https://github.com/D4Gj/gos/raw/andr/andr.txt
 CPP консольное приложение с двусвязным списком и односвязным - https://github.com/D4Gj/gos/raw/cpp/cpp.txt
+CPP консольное приложение с двусвязным списком Альбины - https://github.com/D4Gj/gos/raw/cpp/cpp_alb.txt
 IP1 - https://github.com/D4Gj/gos/raw/ip/1.txt
 IP2 - https://github.com/D4Gj/gos/raw/ip/2.txt
 IP3 - https://github.com/D4Gj/gos/raw/ip/3.txt
