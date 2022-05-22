@@ -44,25 +44,37 @@ public class CircularDoublyLinkedList<T> : IEnumerable<T>  // кольцевой
         }
         public void AddCenter(T data)
         {
-            if (this.Count <= 1)
+            if (this.Count <= 1) //проверка что в списке больше 1 одного элемента
             {
                 this.Add(data);
             }
             else
             {
+		
+		Находим центр списка
                 int cent = this.count / 2;
+		//берем элемент который будет левее
                 DoublyNode<T> prevNode = head;
+		//Берем элемент который будет правее
                 DoublyNode<T> nextNode = head.Next;
+		//создаем новый узел
                 DoublyNode<T> newNode = new DoublyNode<T>(data);
+		//находим место куда нужно вставить узел
                 for (int i = 1; i < cent; i++)
                 {
+		    //Шагаем по узлам
                     prevNode = prevNode.Next;
                     nextNode = nextNode.Next;
                 }
+		//Говорим левому узлу что следующая от неё новый узел
                 prevNode.Next = newNode;
+		//Говорим что следующий от нового узла это правый узел
                 newNode.Next = nextNode;
+		//Говорим правому что предыдущий это новый узел
                 nextNode.Previous = newNode;
+		//Говорим что предыдущий от гового узла левый
                 newNode.Previous = prevNode;
+		//Так как мы добавили новый узел то увеличиваем количесвто элементов в списке на 1
                 count++;
             }
         }
