@@ -177,7 +177,7 @@ struct SingleList
 		//Снова первый
 		Node* pTemp = first;
 		//Создаём ещё ноду, чтобы иметь пердыдущую ноду
-		Node* pTempPrev;
+		Node* pTempPrev = nullptr;
 		//Если длина ноль, то нахуй
 		if (is_empty())
 		{
