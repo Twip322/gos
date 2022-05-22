@@ -3,24 +3,24 @@ class HashElement
         private int key;
         private int value;
         private bool deleted;
-
+        //конструктор
         public HashElement(int key, int value)
         {
             this.key = key;
             this.value = value;
             deleted = false;
         }
-
+        //вычисляем хеш по значению
         public int hash(int value)
         {
             return value % 10;
         }
-
+        //сетер на удаление
         public void setDeleted()
         {
             deleted = true;
         }
-
+        //гетер на удаление
         public bool isDeleted()
         {
             return deleted;
@@ -46,7 +46,7 @@ class HashElement
 
         public int SIZE = 10;
         int[][] table;
-
+        // Формируем таблицу 
         public HashWithChaining()
         {
             table = new int[SIZE][];
@@ -56,17 +56,18 @@ class HashElement
                 table[i] = new int[10];
             }
         }
-
+        //вычисляем хеш по значению
         public int hash(int value)
         {
             return Math.Abs(value) % SIZE;
         }
-
+        // добавление в таблицу и собстна с цепочку
         public void add(int value)
         {
             int code = hash(value);
             for (int i = 0; i < table[code].Length; i++)
             {
+                // находим пустую ячейку в цепочке
                 if (table[code][i] == 0)
                 {
                     table[code][i] = value;
@@ -74,10 +75,12 @@ class HashElement
                 }
             }
         }
-
+        //поиск значения
         public void find(int value)
         {
+            //вычисляем хеш
             int code = hash(value);
+            //находим знначение в методе цепочек
             for (int i = 0; i < table[code].Length; i++)
             {
                 if (table[code][i].Equals(value))
@@ -88,7 +91,7 @@ class HashElement
             }
             Console.WriteLine("Не нашли");
         }
-
+        // Удаление ну тут так же по хешу обрааемся в ячейку находим значение и удаляем
         public bool delete(int value)
         {
             int code = hash(value);
@@ -140,17 +143,18 @@ class HashElement
         {
             public static int SIZE = 100001;
             private HashElement[] table = new HashElement[SIZE];
-
+            //вычисление хеша
             public int hash(int value)
             {
                 return value % 10;
             }
-
+            //Добавление
             public bool add(int value)
             {
-
+                // следующее поле для добавления если первое занято
                 int probe;
                 int code = hash(value);
+                // Добавляем только в пустую ячейку
                 if ((table[code] == null) || table[code].isDeleted())
                 {
                     table[code] = new HashElement(code, value);
@@ -167,7 +171,8 @@ class HashElement
                 }
 
 
-
+                // добавление в пробу(след ячейку) 
+                // если ячейка пустая идем дальше пока не найдем пустую
                 while ((probe != -1) && (probe != code))
                 {
 
@@ -194,7 +199,7 @@ class HashElement
                     return true;
             }
 
-
+            // Ищем по хешу и идем дальше что бы найти нужное значение
             public int find(int value)
             {
 
@@ -215,7 +220,7 @@ class HashElement
                         probe = code + 1;
                 }
 
-
+                // если не нашли по хешу идем дальше пока не найдем
                 while ((probe != -1) && (probe != code))
                 {
                     if (table[probe] == null)
@@ -237,7 +242,7 @@ class HashElement
 
                 return -1;
             }
-
+            // ищем по хешу и идем дальше пока не найдем наше значение
             public bool delete(int value)
             {
 
@@ -265,7 +270,7 @@ class HashElement
                     }
                 }
 
-
+                // если не нашли по хешу идем дальше пока не найдем
 
                 while ((probe != -1) && (probe != code))
                 {
