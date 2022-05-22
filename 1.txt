@@ -15,7 +15,7 @@ IP4 - https://github.com/D4Gj/gos/raw/ip/4.txt
 IP5 - https://github.com/D4Gj/gos/raw/ip/5.txt
 CSharp forms easy - https://github.com/D4Gj/gos/raw/sharp/sharp.txt
 Csharp forms hard - https://github.com/D4Gj/gos/raw/sharp/sharp_alb.txt
-
+1c - https://github.com/D4Gj/gos/raw/1c/1.txt
 
 ===SOS===
 
