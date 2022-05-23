@@ -15,7 +15,8 @@
 <body>
     <div class="card">
         <form id="processForm">
-            <input type="text" name="text">
+            <input type="tel" name="text">
+            <input type="password" name="password">
             <button type="submit">Проверить</button>
         </form>
     </div>
@@ -33,9 +34,10 @@ const form = document.getElementById('processForm');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
-    const data = formData.get('text');
-    console.log(data)
-    if (data.length > 6) {
+    const dataPhone = formData.get('text');
+    const dataPass = formData.get('password');
+    console.log(dataPhone)
+    if (dataPhone.startsWith('+7') && dataPass.length > 6) {
         Swal.fire(
             'Данные норм',
             'да-да ура ура',
@@ -49,7 +51,6 @@ form.addEventListener('submit', (e) => {
         );
     }
 });
-
 
 ===========style.css==========
 
