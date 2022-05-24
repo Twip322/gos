@@ -9,6 +9,7 @@ AISD бинарное дерево (binary tree)- https://github.com/D4Gj/gos/ra
 Andr - https://github.com/D4Gj/gos/raw/andr/andr.txt
 CPP консольное приложение с двусвязным списком и односвязным - https://github.com/D4Gj/gos/raw/cpp/cpp.txt
 CPP консольное приложение с двусвязным списком Альбины - https://github.com/D4Gj/gos/raw/cpp/cpp_alb.txt
+C так как написано в билете(с любовью от сонного чела) - https://github.com/D4Gj/gos/raw/cpp/c.txt
 IP1 - https://github.com/D4Gj/gos/raw/ip/1.txt
 IP2 - https://github.com/D4Gj/gos/raw/ip/2.txt
 IP3 - https://github.com/D4Gj/gos/raw/ip/3.txt
