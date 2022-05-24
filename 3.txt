@@ -1,4 +1,6 @@
 //Открыть терминал и вставить npx create-react-app my-app --template typescript
+//cd my-app
+//npm start
 
 //Изменить файл src/App.tsx
 ===========App.tsx===========
