@@ -1,11 +1,11 @@
 AISD почти все- https://github.com/D4Gj/gos/raw/aisd/Program.cs
-AISD хеширование, пробирование и открытая адресация https://github.com/D4Gj/gos/raw/aisd/hash.txt
-AISD круговой двойной список - https://github.com/D4Gj/gos/raw/aisd/clist.txt
-AISD двусвязный список - https://github.com/D4Gj/gos/raw/aisd/dlist.txt
-AISD граф - https://github.com/D4Gj/gos/raw/aisd/graf.txt
-AISD односвязный список - https://github.com/D4Gj/gos/raw/aisd/list.txt
-AISD все сортировки - https://github.com/D4Gj/gos/raw/aisd/sort.txt
-AISD бинарное дерево - https://github.com/D4Gj/gos/raw/aisd/tree.txt
+AISD хеширование, пробирование и открытая адресация(hashing with probe and addr) https://github.com/D4Gj/gos/raw/aisd/hash.txt
+AISD круговой двойной список (circular doubly linked list) - https://github.com/D4Gj/gos/raw/aisd/clist.txt
+AISD двусвязный список (doubly linked list) - https://github.com/D4Gj/gos/raw/aisd/dlist.txt
+AISD граф (graph)- https://github.com/D4Gj/gos/raw/aisd/graf.txt
+AISD односвязный список (singly linked list)- https://github.com/D4Gj/gos/raw/aisd/list.txt
+AISD все сортировки (all sorts)- https://github.com/D4Gj/gos/raw/aisd/sort.txt
+AISD бинарное дерево (binary tree)- https://github.com/D4Gj/gos/raw/aisd/tree.txt
 Andr - https://github.com/D4Gj/gos/raw/andr/andr.txt
 CPP консольное приложение с двусвязным списком и односвязным - https://github.com/D4Gj/gos/raw/cpp/cpp.txt
 CPP консольное приложение с двусвязным списком Альбины - https://github.com/D4Gj/gos/raw/cpp/cpp_alb.txt
