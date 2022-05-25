@@ -1,4 +1,4 @@
-uusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,27 @@ namespace GosTest
         public int hash(int value)
         {
             return Math.Abs(value) % SIZE;
+        }
+        public void reHash(int size)
+        {
+            List<int>[] newTable = new List<int>[size];
+            SIZE = size;
+            for (int i = 0; i < newTable.Length; i++)
+            {
+                newTable[i] = new List<int>();
+            }
+            for (int i = 0; i < table.Length; i++)
+            {
+                if(table[i].Count!=0)
+                {
+                    foreach(int test in table[i])
+                    {
+                        int code = hash(test);
+                        newTable[code].Add(test);
+                    }
+                }
+            }
+            table = newTable;
         }
         // добавление в таблицу и собстна с цепочку
         public void add(int value)
@@ -89,9 +110,11 @@ namespace GosTest
         {
             HashWithChaining h = new HashWithChaining();
             h.add(7);
+            h.add(3);
             h.add(8);
-            h.delete(8);
             h.add(7);
+            h.printTable();
+            h.reHash(20);
             h.printTable();
             Console.ReadLine();
 
