@@ -1,4 +1,4 @@
-using System;
+uusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace GosTest
 {
+   
     class HashWithChaining
     {
 
         /*Метод-цепоцки. Суть этого метода проста: если хеш-функция выделяет один индекс сразу двум элементам, то храниться они будут 
          * в одном и том же индексе, но уже с помощью двусвязного списка. */
         public int SIZE = 10;
-        int[][] table;
+        List<int>[] table;
         // Формируем таблицу 
         public HashWithChaining()
         {
-            table = new int[SIZE][];
+            table = new List<int>[SIZE];
 
             for (int i = 0; i < table.Length; i++)
             {
-                table[i] = new int[10];
+                table[i] = new List<int>();
             }
         }
         //вычисляем хеш по значению
@@ -32,15 +33,7 @@ namespace GosTest
         public void add(int value)
         {
             int code = hash(value);
-            for (int i = 0; i < table[code].Length; i++)
-            {
-                // находим пустую ячейку в цепочке
-                if (table[code][i] == 0)
-                {
-                    table[code][i] = value;
-                    return;
-                }
-            }
+            table[code].Add(value);
         }
         //поиск значения
         public void find(int value)
@@ -48,7 +41,7 @@ namespace GosTest
             //вычисляем хеш
             int code = hash(value);
             //находим знначение в методе цепочек
-            for (int i = 0; i < table[code].Length; i++)
+            for (int i = 0; i < table[code].Count; i++)
             {
                 if (table[code][i].Equals(value))
                 {
@@ -62,14 +55,11 @@ namespace GosTest
         public bool delete(int value)
         {
             int code = hash(value);
-            for (int i = 0; i < table[code].Length; i++)
+            for (int i = 0; i < table[code].Count; i++)
             {
-                if (table[code][i].Equals(value))
+                if (table[code].Contains(value))
                 {
-                    for (int k = i; k < table[code].Length - 1; k++)
-                    {
-                        table[code][k] = table[code][k + 1];
-                    }
+                    table[code].Remove(value);
                     return true;
                 }
             }
@@ -79,10 +69,10 @@ namespace GosTest
         {
             for (int i = 0; i < table.Length; i++)
             {
-                if (table[i].Length == 0)
+                if (table[i].Count == 0)
                     continue;
                 Console.Write(i + " ");
-                for (int k = 0; k < table[i].Length; k++)
+                for (int k = 0; k < table[i].Count; k++)
                 {
                     if (!table[i][k].Equals(0))
                     {
